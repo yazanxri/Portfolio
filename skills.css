@@ -15,7 +15,7 @@
   background: transparent;
 }
 
-.logo-panel img,
+section skills-section patterned-section .logo-panel img,
 .logo-container img,
 .yazan-logo {
   display: block;
@@ -118,47 +118,8 @@
   transform-origin: left;
 }
 
-.cyan-meter .meter>span,.teal-meter .meter>span,.pink-meter .meter>span {
+.cyan-meter .meter>span,
+.teal-meter .meter>span,
+.pink-meter .meter>span {
   background: linear-gradient(110deg, #A57A43, #C9A96A, #E0CBA7);
 }
-.yazan-logo {
-    clip-path: inset(0 100% 0 0);
-    animation: logoReveal 3s ease-in-out forwards;
-}
-
-@keyframes logoReveal {
-    0% {
-        clip-path: inset(0 100% 0 0);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    100% {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-    }
-}
-.meter>span {
-    clip-path: inset(0 100% 0 0);
-    animation: logoReveal 3s ease-in-out forwards;
-}
-
-@keyframes logoReveal {
-    0% {
-        clip-path: inset(0 100% 0 0);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    100% {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-    }
-}
-
