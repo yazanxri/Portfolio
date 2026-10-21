@@ -1,4 +1,3 @@
-
 @import url("about.css");
 @import url("skills.css");
 @import url("projects.css");
@@ -163,24 +162,32 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 28px;
+  padding-top: 0;
+  padding-bottom: 0;
+
 }
 
 .navigation {
   width: calc(100% - 72px);
-  max-width: 930px;
-  min-height: 72px;
+  max-width: 1450px;
+  height: 210px;
+  min-height: 110px;
   margin: 0 auto;
-  border: 1px solid rgba(153, 113, 60, 0.25);
-  border-radius: 100px;
-  background: rgba(255, 252, 247, 0.9);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 8px 28px rgba(50, 38, 22, 0.07);
+  border: none;
+  border-radius: 0;
+  background: url("assets/gold.webp") center / 100% 100% no-repeat;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  padding: 10px 27px;
+  padding-top: 0;
+  padding-bottom: 110px;
+  padding-left: 10%;
+  padding-right: 28%;
+
+
+
 }
 
 .brand {
@@ -191,13 +198,16 @@ button {
   font-weight: 750;
   letter-spacing: 0.2px;
   white-space: nowrap;
+  color: #382307;
 }
 
 .cube-icon {
+
   flex: none;
 }
 
 .nav-links {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -205,11 +215,32 @@ button {
   gap: 34px;
 }
 
+.navigation {
+  clip-path: inset(0 100% 0 0);
+  animation: logoReveal 3s ease-in-out forwards;
+}
+
+@keyframes logoReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
 .nav-links a {
   position: relative;
   display: inline-block;
   padding: 7px 0 14px;
-  color: #555B62;
+  color: #0a0023;
   font-size: 17px;
   transition: color 250ms;
 }
@@ -221,7 +252,7 @@ button {
   bottom: 3px;
   width: 45px;
   height: 12px;
-  border-bottom: 3px solid #B38B53;
+  border-bottom: 3px solid #200a4f;
   border-radius: 0 0 50% 50%;
   opacity: 0;
   transform: translateX(-50%) scaleX(0.2) rotate(-7deg);
@@ -230,7 +261,7 @@ button {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  color: #99713C;
+  color: #4b3c99;
 }
 
 .nav-links a:hover::after,
@@ -293,6 +324,27 @@ button {
   margin: 0;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.hero h1 {
+  clip-path: inset(0 100% 0 0);
+  animation: logoReveal 3s ease-in-out forwards;
+}
+
+@keyframes logoReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
 }
 
 .cursor {
@@ -394,19 +446,19 @@ button {
 /* 5 — BACK TO TOP (ADD ONE ANCHOR TO HTML) */
 .back-to-top {
   position: fixed;
-  right: 700px;
+  right: 1400px;
   bottom: 27px;
   z-index: 50;
-  width: 52px;
-  height: 52px;
+  width: 55px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #A57A43;
   border-radius: 18px;
-  background: linear-gradient(135deg, #F8F1E7, #C9A96A);
+  background: linear-gradient(135deg, #000000, #b6a776);
   color: #0F172A;
-  font-size: 28px;
+  font-size: 0px;
   line-height: 1;
   box-shadow: 0 9px 24px rgba(121, 90, 49, 0.2);
   transition: transform 250ms, box-shadow 250ms;
@@ -441,6 +493,7 @@ button {
 
 /* 6 — ONLY MEDIA QUERY: MOBILE (all sections in one place) */
 @media (max-width: 700px) {
+
   html {
     scroll-padding-top: 125px;
   }
@@ -464,81 +517,142 @@ button {
 
   /* Navigation and home */
   .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding-top: 12px;
-  z-index: 1000;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+  }
 
   .navigation {
-    width: calc(100% - 24px);
-    padding: 12px 15px;
-    border-radius: 20px;
+    position: relative;
+
+    width: calc(100% - 12px);
+    max-width: 100%;
+
+    height: 125px;
+    min-height: 0;
+
+    margin: 0 auto;
+    padding: 0;
+
+    background-image: url("assets/gold.png");
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-    position: sticky;
-    top: 12px;
-  }
+    align-items: center;
+    justify-content: flex-start;
 
-  .nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 3px;
-    width: 45px;
-    height: 12px;
-    border-bottom: 3px solid #B38B53;
-    border-radius: 0 0 50% 50%;
-    opacity: 0;
-    transform: translateX(-50%) scaleX(0.2) rotate(-7deg);
-    transition: transform 300ms ease, opacity 300ms ease;
-  }
+    gap: 0;
 
-  .nav-links a:hover,
-  .nav-links a:focus-visible {
-    color: #99713C;
-  }
-
-  .nav-links a:hover::after,
-  .nav-links a:focus-visible::after,
-  .nav-links a:active::after {
-    opacity: 1;
-    transform: translateX(-50%) scaleX(1) rotate(-7deg);
-  }
-
-  .brand {
-    font-size: 18px;
-  }
-
-  .cube-icon {
-    width: 27px;
-    height: 27px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .nav-links {
-    gap: 5px 16px;
+    position: absolute;
+
+    top: 15px;
+    left: 5%;
+    right: 500%;
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    margin: 0;
+    padding: 0;
   }
 
   .nav-links a {
-    font-size: 13px;
-    padding: 5px 0 12px;
+    display: inline-block;
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    padding: 3px 0;
+
+    color: #04001d;
   }
 
   .nav-links a::after {
-    width: 29px;
-    height: 9px;
-    border-bottom-width: 2px;
+    width: 25px;
+    height: 7px;
+    bottom: -5px;
+    border-bottom: 2px solid #B38B53;
   }
+
+
+  .brand {
+    position: absolute;
+    top: 16px;
+    left: 5%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 15px;
+    font-weight: 750;
+    white-space: nowrap;
+    color: #382307;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+
+  .cube-icon {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+  }
+
+
+
 
   .hero {
     min-height: 740px;
     height: auto;
     max-height: none;
+
     padding: 160px 0 70px;
     align-items: flex-start;
+  }
+
+  .hero-content {
+    padding-top: 50px;
+  }
+
+  .hero h1 {
+    font-size: 47px;
+    letter-spacing: -2px;
+    white-space: normal;
+  }
+
+  /* BACK TO TOP */
+  .back-to-top {
+    right: 16px;
+    bottom: 20px;
   }
 
   .hero-art {
@@ -550,16 +664,6 @@ button {
   .hero-art::after {
     background: linear-gradient(90deg, rgba(235, 225, 211, 0.8), rgba(235, 225, 211, 0.5)),
       linear-gradient(0deg, #EBE1D3 0%, transparent 55%);
-  }
-
-  .hero-content {
-    padding-top: 90px;
-  }
-
-  .hero h1 {
-    font-size: 47px;
-    letter-spacing: -2px;
-    white-space: normal;
   }
 
   .cursor {
@@ -600,14 +704,7 @@ button {
     font-size: 20px;
   }
 
-  .back-to-top {
-    right: 15px;
-    bottom: 15px;
-    width: 46px;
-    height: 46px;
-    font-size: 24px;
-    border-radius: 15px;
-  }
+
 
   /* About */
   .about-layout {
@@ -619,7 +716,7 @@ button {
   }
 
   .about-panel h3 {
-    font-size: 24px;
+    font-size: 2px;
   }
 
   .highlight-card {
@@ -627,14 +724,18 @@ button {
   }
 
   /* Skills */
+  #skills {
+    padding-bottom: 5px;
+  }
+
   .skills-layout {
     grid-template-columns: 100%;
   }
 
   .logo-panel,
   .logo-container {
-      max-height: 250px;
-  min-height: 300px;;
+    max-height: 250px;
+    min-height: 300px;
   }
 
   .logo-panel img,
@@ -655,6 +756,7 @@ button {
   }
 
   /* Projects */
+
   .projects-grid {
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -729,9 +831,21 @@ button {
 
   .footer-brand,
   .footer-col {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border-right: 0;
     border-bottom: 1px solid rgba(153, 113, 60, 0.25);
     padding: 0 0 18px;
+  }
+
+  .footer-col a {
+    justify-content: center;
+
+  }
+
+  .footer-socials {
+    justify-content: center;
   }
 
   .footer-brand img {
@@ -743,4 +857,6 @@ button {
     text-align: center;
     gap: 8px;
   }
+
+
 }
