@@ -1,0 +1,72 @@
+.about-section {
+  background: transparent;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: calc(55% - 12px) calc(45% - 12px);
+  gap: 24px;
+}
+
+.about-panel {
+  padding: 45px;
+}
+
+.about-code {
+  font-size: 50px;
+  font-weight: 800;
+  color: #99713C;
+}
+
+.about-panel h3 {
+  font-size: 32px;
+  margin: 10px 0 15px;
+}
+
+.about-panel p,
+.highlight-card p {
+  color: #555B62;
+  margin: 0 0 14px;
+}
+
+.text-link {
+  display: inline-block;
+  color: #99713C;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 16px;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+}
+
+.highlight-card h3 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.highlight-card p {
+  margin: 0;
+}
+
+.highlight-icon {
+  color: #99713C;
+  font-size: 22px;
+  font-weight: 900;
+  border: 1px solid rgba(153, 113, 60, 0.28);
+  padding: 12px;
+  border-radius: 10px;
+  background: #F8F0E3;
+}

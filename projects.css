@@ -1,0 +1,142 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: calc(50% - 14px) calc(25% - 7px) calc(25% - 7px);
+  grid-template-rows: repeat(2, minmax(300px, auto));
+  gap: 14px;
+}
+
+.project-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 250ms, box-shadow 250ms;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(69, 51, 30, 0.12);
+}
+
+.featured-card {
+  grid-row: span 2;
+}
+
+.project-image {
+  position: relative;
+  height: 205px;
+  overflow: hidden;
+}
+
+.project-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.featured-card .project-image {
+  height: 65%;
+  min-height: 385px;
+}
+
+.featured-card .project-image img {
+  object-position: center;
+}
+
+.image-pill {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  border: 1px solid #C9A96A;
+  background: rgba(255, 252, 247, 0.94);
+  color: #795A31;
+  border-radius: 25px;
+  padding: 3px 13px;
+  font-size: 12px;
+}
+
+.project-body {
+  flex: 1;
+  padding: 17px 19px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-card .project-body {
+  padding: 26px;
+}
+
+.project-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.project-body h3 {
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.featured-card .project-body h3 {
+  font-size: 33px;
+}
+
+.project-arrow {
+  border: 1px solid #C9A96A;
+  color: #0F172A;
+  border-radius: 11px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  flex: none;
+  place-items: center;
+  font-size: 22px;
+  background: #F5E9D7;
+}
+
+.project-body p {
+  color: #555B62;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 7px 0 14px;
+}
+
+.featured-card .project-body p {
+  font-size: 17px;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.tags span {
+  background: #F8F0E3;
+  border: 1px solid rgba(153, 113, 60, 0.28);
+  color: #574733;
+  border-radius: 25px;
+  padding: 3px 11px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.featured-card .tags span {
+  font-size: 15px;
+  padding: 6px 14px;
+}
+
+.tags span::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #C9A96A;
+  margin-right: 7px;
+}
