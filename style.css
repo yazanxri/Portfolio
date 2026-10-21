@@ -464,8 +464,14 @@ button {
 
   /* Navigation and home */
   .site-header {
-    padding-top: 12px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 12px;
+  z-index: 1000;
+}
 
   .navigation {
     width: calc(100% - 24px);
