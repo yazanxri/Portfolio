@@ -633,7 +633,8 @@ button {
 
   .logo-panel,
   .logo-container {
-    min-height: 255px;
+      max-height: 250px;
+  min-height: 300px;;
   }
 
   .logo-panel img,
