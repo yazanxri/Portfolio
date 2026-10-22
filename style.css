@@ -653,8 +653,7 @@ button {
 
   /* BACK TO TOP */
   .back-to-top {
-    right: 16px;
-    bottom: 20px;
+        display: none;
   }
 
   .hero-art {
